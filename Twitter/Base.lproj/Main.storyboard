@@ -9,12 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="fQ4-wd-If2">
             <objects>
-                <tableViewController id="kJm-gx-fKZ" sceneMemberID="viewController">
+                <tableViewController id="kJm-gx-fKZ" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="INp-9I-EkM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="kJm-gx-fKZ" id="17U-uS-0Yn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wEY-BT-1eg"/>
+                    <navigationItem key="navigationItem" title="Home" id="wEY-BT-1eg">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="eBo-oM-9Ca">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onLogout:" destination="kJm-gx-fKZ" id="v0I-MF-ykl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jG-8O-Gtw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,8 +50,9 @@
             <objects>
                 <navigationController id="PDH-gr-r87" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zVB-OB-u61">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.098039215690000001" green="0.1529411765" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="kJm-gx-fKZ" kind="relationship" relationship="rootViewController" id="ok2-sc-jpx"/>
@@ -54,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="769" y="-13"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="DVI-fa-g3B">
             <objects>
-                <viewController id="KLq-4i-g4u" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="KLq-4i-g4u" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tab-kI-lrg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +80,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="KLq-4i-g4u" eventType="touchUpInside" id="1u2-94-wjO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CoI-kF-bDl"/>
@@ -86,7 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="PDH-gr-r87" kind="presentation" identifier="loginToHome" id="6iv-jb-yV2"/>
+                        <segue destination="PDH-gr-r87" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="6iv-jb-yV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fe6-rG-V19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
