@@ -119,8 +119,8 @@
                                 <action selector="onLogout:" destination="kJm-gx-fKZ" id="v0I-MF-ykl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="7eN-6l-gQN">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" image="edit-icon" id="7eN-6l-gQN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="PXK-d8-D4x" kind="presentation" modalPresentationStyle="fullScreen" id="4Gw-Xg-2Jf"/>
                             </connections>
@@ -163,7 +163,7 @@
                                 <action selector="cancelButton:" destination="I3S-KC-YrZ" id="HnK-jc-Tty"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="nvx-A9-FOi">
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" style="done" id="nvx-A9-FOi">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="tweetButton:" destination="I3S-KC-YrZ" id="o2D-ft-2rg"/>
@@ -258,6 +258,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="edit-icon" width="30" height="27"/>
         <image name="favor-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="opaqueSeparatorColor">
