@@ -38,6 +38,7 @@ class HomeTableViewController: UITableViewController {
         
         let imageURL = URL(string: (user["profile_image_url_https"]) as! String)
         let data = try? Data(contentsOf: imageURL!)
+       
         if let imageData = data {
             cell.profileimageView.image = UIImage(data:imageData)
         }
@@ -45,7 +46,8 @@ class HomeTableViewController: UITableViewController {
         // if current tweet is favorited or not
         cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
         cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
-        
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+
         
         return cell
         
