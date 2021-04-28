@@ -16,12 +16,12 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
+- [x] User can pull to refresh. (1pt) <did not have new content, so no update in gif>
 - [ ] User can load past tweets infinitely. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/sophiaallui/iOS_Twitter/blob/main/iOS_twitter_pt1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/sophiaallui/iOS_Twitter/blob/main/iOS_twitter_pt1_update.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
