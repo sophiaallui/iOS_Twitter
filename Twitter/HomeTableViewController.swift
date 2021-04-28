@@ -42,8 +42,18 @@ class HomeTableViewController: UITableViewController {
             cell.profileimageView.image = UIImage(data:imageData)
         }
         
+        // if current tweet is favorited or not
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        
+        
         return cell
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
     }
     
     override func viewDidLoad() {
