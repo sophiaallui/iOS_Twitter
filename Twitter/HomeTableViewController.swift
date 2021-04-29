@@ -41,6 +41,8 @@ class HomeTableViewController: UITableViewController {
        
         if let imageData = data {
             cell.profileimageView.image = UIImage(data:imageData)
+            cell.profileimageView.layer.cornerRadius = cell.profileimageView.frame.height/2
+
         }
         
         // if current tweet is favorited or not
